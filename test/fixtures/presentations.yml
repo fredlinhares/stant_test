@@ -1,11 +1,127 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  duration_in_minutes: 15
+diminuindo_tempo_de_execucao_de_testes_em_aplicacoes_rails_enterprise:
+  title: "Diminuindo tempo de execução de testes em aplicações Rails enterprise"
+  duration_in_minutes: 60
   is_lightning: false
+  previous_presentation: null
+  track: a
+  morning: true
 
-two:
-  title: MyOtherString
+reinventando_a_roda_em_asp_classico:
+  title: "Reinventando a roda em ASP clássico"
+  duration_in_minutes: 45
+  is_lightning: false
+  previous_presentation:
+    diminuindo_tempo_de_execucao_de_testes_em_aplicacoes_rails_enterprise
+
+apresentando_lua_para_as_massas:
+  title: "Apresentando Lua para as massas"
+  duration_in_minutes: 30
+  is_lightning: false
+  previous_presentation:
+    reinventando_a_roda_em_asp_classico
+
+erros_de_ruby_oriundos_de_versoes_erradas_de_gems:
+  title: "Erros de Ruby oriundos de versões erradas de gems"
+  duration_in_minutes: 45
+  is_lightning: false
+  previous_presentation: apresentando_lua_para_as_massas
+
+erros_comuns_em_ruby:
+  title: "Erros comuns em Ruby"
+  duration_in_minutes: 45
+  is_lightning: false
+  previous_presentation:
+    ruby_on_rails_por_que_devemos_deixa_lo_para_tras
+
+rails_para_usuarios_de_django:
+  title: "Rails para usuários de Django"
   duration_in_minutes: 5
   is_lightning: true
+  previous_presentation: manutencao_de_aplicacoes_legadas_em_ruby_on_rails
+
+trabalho_remoto_pros_e_cons:
+  title: "Trabalho remoto: prós e cons"
+  duration_in_minutes: 60
+  is_lightning: false
+  previous_presentation: null
+  track: b
+  morning: true
+
+desenvolvimento_orientado_a_gambiarras:
+  title: "Desenvolvimento orientado a gambiarras"
+  duration_in_minutes: 45
+  is_lightning: false
+  previous_presentation: null
+  track: b
+  morning: false
+
+aplicacoes_isomorficas_o_futuro_que_talvez_nunca_chegaremos:
+  title: "Aplicações isomórficas: o futuro (que talvez nunca chegaremos)"
+  duration_in_minutes: 30
+  is_lightning: false
+  previous_presentation: a_magica_do_rails_como_ser_mais_produtivo
+
+codifique_menos_escreva_mais:
+  title: "Codifique menos, Escreva mais!"
+  duration_in_minutes: 30
+  is_lightning: false
+  previous_presentation:
+    aplicacoes_isomorficas_o_futuro_que_talvez_nunca_chegaremos
+
+programacao_em_par:
+  title: "Programação em par"
+  duration_in_minutes: 45
+  is_lightning: false
+  previous_presentation: erros_comuns_em_ruby
+
+a_magica_do_rails_como_ser_mais_produtivo:
+  title: "A mágica do Rails: como ser mais produtivo"
+  duration_in_minutes: 60
+  is_lightning: false
+  previous_presentation: trabalho_remoto_pros_e_cons
+
+ruby_on_rails_por_que_devemos_deixa_lo_para_tras:
+  title: "Ruby on Rails: Por que devemos deixá-lo para trás"
+  duration_in_minutes: 60
+  is_lightning: false
+  previous_presentation: null
+  track: a
+  morning: false
+
+clojure_engoliu_scala_migrando_minha_aplicacao:
+  title: "Clojure engoliu Scala: migrando minha aplicação"
+  duration_in_minutes: 45
+  is_lightning: false
+  previous_presentation: desenvolvimento_orientado_a_gambiarras
+
+ensinando_programacao_nas_grotas_de_maceio:
+  title: "Ensinando programação nas grotas de Maceió"
+  duration_in_minutes: 30
+  is_lightning: false
+  previous_presentation: programacao_em_par
+
+ruby_vs_clojure_para_desenvolvimento_backend:
+  title: "Ruby vs. Clojure para desenvolvimento backend"
+  duration_in_minutes: 30
+  is_lightning: false
+  previous_presentation: ensinando_programacao_nas_grotas_de_maceio
+
+manutencao_de_aplicacoes_legadas_em_ruby_on_rails:
+  title: "Manutenção de aplicações legadas em Ruby on Rails"
+  duration_in_minutes: 60
+  is_lightning: false
+  previous_presentation: um_mundo_sem_stackoverflow
+
+um_mundo_sem_stackoverflow:
+  title: "Um mundo sem StackOverflow"
+  duration_in_minutes: 30
+  is_lightning: false
+  previous_presentation: clojure_engoliu_scala_migrando_minha_aplicacao
+
+otimizando_css_em_aplicacoes_rails:
+  title: "Otimizando CSS em aplicações Rails"
+  duration_in_minutes: 30
+  is_lightning: false
+  previous_presentation: ruby_vs_clojure_para_desenvolvimento_backend

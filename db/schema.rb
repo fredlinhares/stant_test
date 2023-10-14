@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_13_123638) do
+ActiveRecord::Schema[7.1].define(version: 2023_10_14_173121) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,7 +20,19 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_13_123638) do
     t.boolean "is_lightning", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "track_id"
+    t.bigint "previous_presentation_id"
+    t.boolean "morning"
+    t.index ["previous_presentation_id"], name: "index_presentations_on_previous_presentation_id"
     t.index ["title"], name: "index_presentations_on_title", unique: true
+    t.index ["track_id"], name: "index_presentations_on_track_id"
   end
 
+  create_table "tracks", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "presentations", "presentations", column: "previous_presentation_id"
+  add_foreign_key "presentations", "tracks"
 end
