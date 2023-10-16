@@ -12,4 +12,9 @@
   <% end %>
 </div>
 
+<%= form_with url: tracks_load_file_path, method: :post do |form| %>
+  <%= form.file_field :presentation_list %>
+  <%= form.submit "Upload" %>
+<% end %>
+
 <%= link_to "New track", new_track_path %>

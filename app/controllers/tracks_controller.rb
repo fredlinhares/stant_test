@@ -19,6 +19,23 @@ class TracksController < ApplicationController
   def edit
   end
 
+  def load_file
+    begin
+      PresentationListsParser.parse params[:presentation_list].tempfile
+      respond_to do |format|
+        format.html { redirect_to(tracks_url,
+                                  notice: "Tracks are successfully created.") }
+        format.json { redirect_to tracks_url }
+      end
+    rescue
+      respond_to do |format|
+        format.html { redirect_to(tracks_url,
+                                  notice: "Failed to lead tracks from file.") }
+        format.json { render json: {}, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # POST /tracks or /tracks.json
   def create
     @track = Track.new(track_params)

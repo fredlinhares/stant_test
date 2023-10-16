@@ -2,6 +2,9 @@ class Presentation < ApplicationRecord
   MorningSessionsBeginningTimeInMinutes = 9.hours.in_minutes.to_i
   AfternoonSessionsBeginningTimeInMinutes = 13.hours.in_minutes.to_i
 
+  MorningSessionsEndingTimeInMinutes = 12.hours.in_minutes.to_i
+  AfternoonSessionsEndingTimeInMinutes = 17.hours.in_minutes.to_i
+
   LightningRegex = /(.+)\slightning\z/
   NormalDurationRegex = /(.+)\s(\d+)min\z/
   ValidTitleRegex = /\A[^0-9]+\z/

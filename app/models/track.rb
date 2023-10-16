@@ -1,17 +1,44 @@
 class Track < ApplicationRecord
   has_many :presentations
 
+  def last_morning_presentation
+    presentation = first_monining_presentation
+    return last_presentation presentation
+  end
+
+  def last_afternoon_presentation
+    presentation = first_afternoon_presentation
+    return last_presentation presentation
+  end
+
   def morning_presentations &block
-    presentations_loop(
-      Presentation.where(track: self, morning: true)[0], block)
+    presentations_loop first_monining_presentation, block
   end
 
   def afternoon_presentations &block
-    presentations_loop(
-      Presentation.where(track: self, morning: false)[0], block)
+    presentations_loop first_afternoon_presentation, block
   end
 
   private
+  def first_monining_presentation
+    Presentation.where(track: self, morning: true)[0]
+  end
+
+  def first_afternoon_presentation
+    Presentation.where(track: self, morning: false)[0]
+  end
+
+  def last_presentation presentation
+    return nil if presentation.nil?
+    loop do
+      if presentation.next_presentation.nil?
+        return presentation
+      else
+        presentation = presentation.next_presentation
+      end
+    end
+  end
+
   def presentations_loop presentation, block
     loop do
       break if presentation.nil?

@@ -1,0 +1,19 @@
+Reducing test execution time in Rails enterprise applications 60min
+Reinventing the wheel in Classic ASP 45min
+Introducing Moon to the masses 30min
+Ruby errors from wrong gem versions 45min
+Common errors in Ruby 45min
+Rails for Django users lightning
+Remote work: pros and cons 60min
+Gambiarra-oriented development 45min
+Isomorphic applications: the future (which we may never reach) 30min
+Code less, write more! 30min
+Pair programming 45min
+The magic of Rails: how to be more productive 60min
+Ruby On Rails: why we should leave it behind 60min
+Clojure swallowed Scala: migrating my application 45min
+Teaching programming in the Grots of Maceió 30min
+Ruby vs. Clojure for backend development 30min
+Maintenance of legacy applications in Ruby on Rails 60min
+A world without StackOverflow 30min
+Optimizing CSS in Rails applications 30min

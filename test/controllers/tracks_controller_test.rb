@@ -23,6 +23,15 @@ class TracksControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to track_url(Track.last)
   end
 
+  test "should create track from file" do
+    file_upload = fixture_file_upload(
+      "presentations_list.txt", "text/plain")
+    assert_difference("Presentation.count", 19) do
+      post tracks_load_file_url, params: {
+             presentation_list: file_upload }
+    end
+  end
+
   test "should show track" do
     get track_url(@track)
     assert_response :success
