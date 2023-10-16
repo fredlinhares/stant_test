@@ -1,0 +1,47 @@
+<%= form_with(model: presentation) do |form| %>
+  <% if presentation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(presentation.errors.count, "error") %> prohibited this presentation from being saved:</h2>
+
+      <ul>
+        <% presentation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :duration_in_minutes, style: "display: block" %>
+    <%= form.number_field :duration_in_minutes %>
+  </div>
+
+  <div>
+    <%= form.label :track_id, style: "display: block" %>
+    <%= form.text_field :track_id %>
+  </div>
+
+  <div>
+    <%= form.label :previous_presentation_id, style: "display: block" %>
+    <%= form.text_field :previous_presentation_id %>
+  </div>
+
+  <div>
+    <%= form.label :is_lightning, style: "display: block" %>
+    <%= form.check_box :is_lightning %>
+  </div>
+
+  <div>
+    <%= form.label :morning, style: "display: block" %>
+    <%= form.check_box :morning %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

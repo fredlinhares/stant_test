@@ -1,0 +1,12 @@
+<div id="<%= dom_id track %>">
+  <% track.morning_presentations do |presentation| %>
+    <%= render partial: "presentations/summary", locals: { presentation: presentation } %>
+    <hr>
+  <% end %>
+  <p>12:00 Almoço</p>
+  <hr>
+  <% track.afternoon_presentations do |presentation| %>
+    <%= render partial: "presentations/summary", locals: { presentation: presentation } %>
+    <hr>
+  <% end %>
+</div>
