@@ -1,4 +1,5 @@
 class Track < ApplicationRecord
+  NetworkingMinimunTimeInMinutes = 16.hours.in_minutes.to_i
   has_many :presentations
 
   def last_morning_presentation
@@ -17,6 +18,15 @@ class Track < ApplicationRecord
 
   def afternoon_presentations &block
     presentations_loop first_afternoon_presentation, block
+  end
+
+  def networking_time_in_minutes
+    ending = last_afternoon_presentation.ending_in_minutes
+    if ending < NetworkingMinimunTimeInMinutes
+      return NetworkingMinimunTimeInMinutes
+    else
+      return ending
+    end
   end
 
   private

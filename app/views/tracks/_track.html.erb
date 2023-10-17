@@ -3,10 +3,12 @@
     <%= render partial: "presentations/summary", locals: { presentation: presentation } %>
     <hr>
   <% end %>
-  <p>12:00 Almoço</p>
+  <p>12:00H Almoço</p>
   <hr>
   <% track.afternoon_presentations do |presentation| %>
     <%= render partial: "presentations/summary", locals: { presentation: presentation } %>
     <hr>
   <% end %>
+  <p><%= fancy_time_from_minutes track.networking_time_in_minutes %> Networking</p>
+  <hr>
 </div>
